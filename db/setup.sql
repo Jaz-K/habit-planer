@@ -1,0 +1,3 @@
+-- db for user
+-- db for scorring
+-- db for habbit planners connected by id
