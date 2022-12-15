@@ -1,1 +1,1 @@
-# habbit-planer
+# habit-planer
