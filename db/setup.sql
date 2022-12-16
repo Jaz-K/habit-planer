@@ -22,7 +22,7 @@ CREATE TABLE habits (
     user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     habit_name VARCHAR (50) NOT NULL,
     days_per_week INT DEFAULT 7,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE scores (
@@ -30,5 +30,4 @@ CREATE TABLE scores (
     user_id INT NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
     tracked_day INT DEFAULT 0,
     score INT DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
