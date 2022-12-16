@@ -28,7 +28,7 @@ CREATE TABLE habits (
 CREATE TABLE scores (
     id SERIAL PRIMARY KEY,
     user_id INT NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
-    tracked_day INT,
-    score INT,
+    tracked_day INT DEFAULT 0,
+    score INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

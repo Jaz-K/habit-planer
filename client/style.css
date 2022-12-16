@@ -29,8 +29,23 @@ form div {
 img {
     width: 8rem;
 }
+.habitOverview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
 .day {
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     background-color: coral;
+    padding: 0.5rem;
+    /* pointer-events: none; */
+    /* cursor: crosshair; */
+    /* show only 7 per row or better use grid */
+    /* width: 12%; */
+}
+.day.active {
+    background-color: goldenrod;
+    cursor: pointer;
 }

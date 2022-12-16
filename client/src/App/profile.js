@@ -1,4 +1,4 @@
-export function Profile({
+export default function Profile({
     first_name,
     last_name,
     img_url,
