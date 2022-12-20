@@ -32,7 +32,7 @@ export default function Login() {
     }
 
     return (
-        <>
+        <div className="welcome">
             <form className="register formStyle" onSubmit={onSubmit}>
                 <div className="form-input">
                     <input type="text" name="email" required />
@@ -46,6 +46,6 @@ export default function Login() {
                 {error && <p className="error">{error}</p>}
                 <Link to="/">Click here to Register</Link>
             </form>
-        </>
+        </div>
     );
 }
