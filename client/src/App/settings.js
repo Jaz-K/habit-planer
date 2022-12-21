@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
-export default function Settings({ user, setUser, setHabits }) {
-    const SAFETYQUESTION = `${user.nick_name} want to leave us!`;
+export default function Settings({ user }) {
+    const SAFETYQUESTION = `${user.nick_name}, thanks for being here!`;
     const [match, setMatch] = useState(false);
     const [error, setError] = useState("");
     const [errorEmail, setErrorEmail] = useState("");
-    // const [errorNick, setErrorNick] = useState("");
+    const [errorNick, setErrorNick] = useState("");
 
-    // const [nickMatch, setNickMatch] = useState(false);
-
-    // const [query, setQuery] = useState("");
-
-    // const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const response = await fetch(`/api/check-nickname?q=${query}`);
-    //         const nickCheck = await response.json();
-    //         if (!nickCheck.error) {
-    //             setNickMatch(false);
-    //         } else {
-    //             setNickMatch(true);
-    //         }
-    //     })();
-    // }, [query]);
     async function editNick(event) {
         event.preventDefault();
 
@@ -39,7 +22,7 @@ export default function Settings({ user, setUser, setHabits }) {
         });
         const data = await response.json();
         console.log("nick response", data);
-        setError(data.error);
+        setErrorNick(data.error);
     }
     async function editProfile(event) {
         event.preventDefault();
@@ -105,10 +88,6 @@ export default function Settings({ user, setUser, setHabits }) {
         console.log(response);
         window.location.href = "/";
     }
-    // function checkNickname(event) {
-    //     console.log("nick check", event.target.value);
-    //     setQuery(event.target.value);
-    // }
 
     function checkDelete(event) {
         console.log("check delete", event.target.value);
@@ -120,9 +99,8 @@ export default function Settings({ user, setUser, setHabits }) {
     }
     return (
         <section className="settings">
-            <h2>Change your nick</h2>
             <form onSubmit={editNick}>
-                {/* check db while typing if nickname is there or not, on change? sending request to do return true or false */}
+                <h2>Change your nickname</h2>
                 <div className="form-input">
                     <input
                         type="text"
@@ -130,17 +108,17 @@ export default function Settings({ user, setUser, setHabits }) {
                         id="nname"
                         defaultValue={user.nick_name}
                         required
-                        // onChange={checkNickname}
                     />
                     <label htmlFor="nname">Nick Name</label>
                 </div>
-                <button /* disabled={!nickMatch} */>Edit</button>
-                {error && (
+                <button>Edit</button>
+                {errorNick && (
                     <span className="error">Nickname already exists</span>
                 )}
             </form>
-            <h2>Change your settings</h2>
+
             <form onSubmit={editProfile}>
+                <h2>Change your name</h2>
                 <div className="form-input">
                     <input
                         type="text"
@@ -163,8 +141,9 @@ export default function Settings({ user, setUser, setHabits }) {
                 </div>
                 <button>Edit</button>
             </form>
-            <h2>Change your Email</h2>
+
             <form onSubmit={editEmail}>
+                <h2>Change your Email</h2>
                 <div className="form-input">
                     <input
                         type="email"
@@ -189,8 +168,9 @@ export default function Settings({ user, setUser, setHabits }) {
                 {errorEmail && <p className="error">{errorEmail} </p>}
                 <button>Edit</button>
             </form>
-            <h2>Change your Password</h2>
+
             <form onSubmit={newPassword}>
+                <h2>Change your Password</h2>
                 <div className="form-input">
                     <input
                         type="password"
@@ -209,18 +189,30 @@ export default function Settings({ user, setUser, setHabits }) {
                         required
                         autoComplete="do-not-autofill"
                     />
-                    <label htmlFor="password">Repeat your password</label>
+                    <label htmlFor="passwordRepeat">Repeat your password</label>
                 </div>
                 {error && <p className="error">{error} </p>}
                 <button>Edit</button>
             </form>
-            <h2>Delete account</h2>
-            <h4>If you want to delete your account please enter:</h4>
-            <p>{SAFETYQUESTION}</p>
-            <input type="text" onChange={checkDelete} />
+
             <form onSubmit={deleteAccount}>
+                <h2>Delete account</h2>
+
+                <h4>If you want to delete your account please enter:</h4>
+                <h5 className="error"> {SAFETYQUESTION}</h5>
+                <div className="form-input">
+                    <input
+                        type="text"
+                        onChange={checkDelete}
+                        id="removeAccount"
+                        required
+                    />
+                    <label htmlFor="removeAccount">Enter the sentence!</label>
+                </div>
+
                 <button disabled={!match}>DELETE ACCOUNT</button>
             </form>
+            <img src="illu_walkoutside.svg" alt="habit tracker" />
         </section>
     );
 }

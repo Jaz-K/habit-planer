@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 138 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,-1444,-412.388)">
-        <g id="ArtBoard3" transform="matrix(0.992806,0,0,0.952088,11.3813,322.892)">
-            <rect x="1443" y="94" width="139" height="125.23" style="fill:none;"/>
+<svg width="100%" height="100%" viewBox="0 0 207 173" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-247.886,1.77636e-15)">
+        <g id="ArtBoard2" transform="matrix(0.355142,0,0,0.297762,-114.359,-5.06196)">
+            <rect x="1020" y="17" width="581" height="581" style="fill:none;"/>
             <clipPath id="_clip1">
-                <rect x="1443" y="94" width="139" height="125.23"/>
+                <rect x="1020" y="17" width="581" height="581"/>
             </clipPath>
             <g clip-path="url(#_clip1)">
-                <g transform="matrix(1.59288,0,0,0.292465,-188.838,66.682)">
+                <g transform="matrix(6.52329,0,0,1.36994,-5656.28,-113.757)">
                     <g transform="matrix(0.152169,0,0,0.839102,865.749,25.6098)">
                         <g transform="matrix(10.9827,0,0,11.3114,-10361.4,-314.465)">
-                            <path d="M1044,60.5L1044,67.75C1044,73.407 1048.59,78 1054.25,78L1074.75,78C1080.03,78 1084.38,74 1084.94,68.867C1084.98,68.5 1085,68.128 1085,67.75L1085,66.109" style="fill:none;stroke:url(#_Linear2);stroke-width:1.85px;"/>
+                            <path d="M1044,60.5L1044,67.75C1044,73.407 1048.59,78 1054.25,78L1074.75,78C1080.03,78 1084.38,74 1084.94,68.867C1084.98,68.5 1085,68.128 1085,67.75L1085,66.109" style="fill:none;stroke:url(#_Linear2);stroke-width:3.1px;"/>
                         </g>
                         <g transform="matrix(10.9827,0,0,11.3114,-10361.4,-314.465)">
-                            <path d="M1085,54.744L1085,47.25C1085,41.593 1080.41,37 1074.75,37L1054.25,37C1048.59,37 1044,41.593 1044,47.25L1044,48.525" style="fill:none;stroke:url(#_Linear3);stroke-width:1.85px;"/>
+                            <path d="M1085,54.744L1085,47.25C1085,41.593 1080.41,37 1074.75,37L1054.25,37C1048.59,37 1044,41.593 1044,47.25L1044,48.525" style="fill:none;stroke:url(#_Linear3);stroke-width:3.1px;"/>
                         </g>
                         <g transform="matrix(7.4297,0,0,7.65209,-8512.35,-835.376)">
-                            <path d="M1288,162L1294.24,155.76L1300.77,162.294" style="fill:none;stroke:url(#_Linear4);stroke-width:2.74px;stroke-linejoin:miter;stroke-miterlimit:3;"/>
+                            <path d="M1288,162L1294.24,155.76L1300.77,162.294" style="fill:none;stroke:url(#_Linear4);stroke-width:4.58px;stroke-linejoin:miter;stroke-miterlimit:3;"/>
                         </g>
                         <g transform="matrix(-7.4297,-9.37111e-16,9.09876e-16,-7.65209,11171.7,1512.07)">
-                            <path d="M1288,162L1294.24,155.76L1300.77,162.294" style="fill:none;stroke:url(#_Linear5);stroke-width:2.74px;stroke-linejoin:miter;stroke-miterlimit:3;"/>
+                            <path d="M1288,162L1294.24,155.76L1300.77,162.294" style="fill:none;stroke:url(#_Linear5);stroke-width:4.58px;stroke-linejoin:miter;stroke-miterlimit:3;"/>
                         </g>
                     </g>
                     <g transform="matrix(0.871899,4.9518,-0.871899,4.9518,191.83,-5226.13)">
-                        <path d="M1050,68L1066,68L1066,38" style="fill:none;stroke:url(#_Linear6);stroke-width:2.51px;"/>
+                        <path d="M1050,68L1066,68L1066,38" style="fill:none;stroke:url(#_Linear6);stroke-width:4.2px;"/>
                     </g>
                 </g>
             </g>

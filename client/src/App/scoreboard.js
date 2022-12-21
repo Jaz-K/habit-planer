@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function ScoreBoard({ allScores, avatar }) {
-    console.log("allScores", allScores);
+    // console.log("allScores", allScores);
     return (
         <div className="scoreboard">
             <h2>Highscores</h2>

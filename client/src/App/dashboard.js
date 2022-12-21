@@ -6,6 +6,7 @@ import HabitModal from "./createHabitModal";
 
 export default function Dashboard({
     user,
+    setUser,
     avatar,
     habits,
     setHabits,
@@ -19,6 +20,9 @@ export default function Dashboard({
     onBioUpdate,
     currentScore,
     deleteHabit,
+    closeAvatarModal,
+    chooseAvatar,
+    avatarModal,
 }) {
     return (
         <>
@@ -36,6 +40,14 @@ export default function Dashboard({
                     onBioUpdate={onBioUpdate}
                     currentScore={currentScore}
                     habits={habits}
+                    onClose={onClose}
+                    setModal={setModal}
+                    modal={modal}
+                    setUser={setUser}
+                    setShroud={setShroud}
+                    closeAvatarModal={closeAvatarModal}
+                    chooseAvatar={chooseAvatar}
+                    avatarModal={avatarModal}
                 />
                 <HabitBoard
                     habits={habits}

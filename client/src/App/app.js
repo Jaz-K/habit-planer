@@ -18,8 +18,12 @@ export default function () {
     const [currentScore, setCurrentScore] = useState(0);
     const [shroud, setShroud] = useState(false);
     const [modal, setModal] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState("menu");
 
-    // console.log("habits app", habits);
+    const [avatarModal, setAvatarModal] = useState(false);
+    const [cheerModal, setCheerModal] = useState(false);
+
+    const [habitStatus, setHabitStatus] = useState([]);
 
     useEffect(() => {
         async function getUser() {
@@ -52,37 +56,75 @@ export default function () {
         console.log("bioupdate");
     }
     function onModalClose() {
+        console.log("onmodal close");
         setModal(false);
         setShroud(false);
     }
     function onShroud() {
         setShroud(false);
         setModal(false);
+        setToggleMenu("menu");
+        setAvatarModal(false);
     }
     async function deleteHabit(id) {
-        console.log("id delete");
-        console.log("del clicked");
+        // console.log("id delete");
+        // console.log("del clicked");
         const response = await fetch(`/api/delete-habit/${id}`, {
             method: "POST",
         });
         const remove = await response.json();
         console.log("remove from habit board", remove);
         const newHabitsList = habits.filter((habit) => habit.id !== id);
-        console.log(newHabitsList);
+        // console.log(newHabitsList);
         setHabits(newHabitsList);
-        // navigate("/");
     }
 
+    function burgerMenu() {
+        setShroud("shroud active");
+        setToggleMenu("menu active");
+    }
+
+    function closeAvatarModal() {
+        setAvatarModal(false);
+        setShroud(false);
+    }
+    function chooseAvatar() {
+        setAvatarModal(true);
+        setShroud(true);
+    }
+    function closeCheerModal() {
+        console.log("closemodal clicks");
+        setCheerModal(false);
+        setShroud(false);
+    }
     return (
         <>
             <BrowserRouter>
                 {shroud && <div className="shroud" onClick={onShroud}></div>}
                 <header>
                     <div>
-                        <h1>Welcome {user.nick_name}</h1>
-                        <nav>
-                            <Link to="/">Dashboard</Link>
-                            <Link to="/settings">Settings</Link>
+                        <Link to="/">
+                            <img
+                                src="/habittracker_text.svg"
+                                alt="habit planer"
+                            />
+                        </Link>
+                        <img
+                            className="burerMenuIcon"
+                            src="/burger.svg"
+                            alt="mobile menu icon"
+                            onClick={burgerMenu}
+                        />
+                        <nav className={`${toggleMenu} navLinks navGap`}>
+                            <button onClick={onShroud} className="menuClose">
+                                ✖
+                            </button>
+                            <Link to="/" onClick={onShroud}>
+                                Dashboard
+                            </Link>
+                            <Link to="/settings" onClick={onShroud}>
+                                Settings
+                            </Link>
                             <a href="/logout" className="logout">
                                 Logout
                             </a>
@@ -95,6 +137,7 @@ export default function () {
                         element={
                             <Dashboard
                                 user={user}
+                                setUser={setUser}
                                 avatar={DEFAULT_AVATAR}
                                 habits={habits}
                                 setHabits={setHabits}
@@ -108,13 +151,27 @@ export default function () {
                                 onBioUpdate={onBioUpdate}
                                 currentScore={currentScore}
                                 deleteHabit={deleteHabit}
+                                closeAvatarModal={closeAvatarModal}
+                                chooseAvatar={chooseAvatar}
+                                avatarModal={avatarModal}
                             />
                         }
                     />
 
                     <Route
                         path="/habit/:nick_name/:id"
-                        element={<Habit deleteHabit={deleteHabit} />}
+                        element={
+                            <Habit
+                                deleteHabit={deleteHabit}
+                                onClose={onModalClose}
+                                setShroud={setShroud}
+                                cheerModal={cheerModal}
+                                closeCheerModal={closeCheerModal}
+                                setCheerModal={setCheerModal}
+                                habitStatus={habitStatus}
+                                setHabitStatus={setHabitStatus}
+                            />
+                        }
                     />
                     <Route
                         path="/settings"

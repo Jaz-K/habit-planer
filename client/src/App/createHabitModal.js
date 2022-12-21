@@ -23,12 +23,12 @@ export default function HabitModal({ onClose, setHabits, habits }) {
     }
     return (
         <section className="modal">
-            <button onClick={onClose} className="closeButton">
+            <button onClick={onClose} className="modalCloseButton">
                 ✖
             </button>
             <h2>Create a new Modal</h2>
             <form onSubmit={createHabit}>
-                <div>
+                <div className="form-input">
                     <input
                         type="text"
                         name="habit_name"
@@ -40,15 +40,16 @@ export default function HabitModal({ onClose, setHabits, habits }) {
                     <label htmlFor="habit_name">Habit Name</label>
                 </div>
 
-                <div>
+                <div className="form-input">
                     <input
                         type="number"
                         id="tracked_day"
                         min="1"
                         max="7"
-                        defaultValue="7"
+                        value="7"
+                        disabled
                     ></input>
-                    <label htmlFor="tracked_days">Days per week</label>
+                    <label htmlFor="tracked_days"></label>
                 </div>
 
                 <button>Create</button>

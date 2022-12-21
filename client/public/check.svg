@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 200 145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-814.183,-50.7609)">
-        <g id="ArtBoard2" transform="matrix(0.344234,0,0,0.24957,463.064,46.5183)">
+<svg width="100%" height="100%" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:3;">
+    <g transform="matrix(1,0,0,1,-1875.32,-302.37)">
+        <g id="ArtBoard2" transform="matrix(0.240964,0,0,0.240964,1629.54,298.274)">
             <rect x="1020" y="17" width="581" height="581" style="fill:none;"/>
-            <g transform="matrix(3.20142,0,0,4.41576,-1586.54,-207.148)">
-                <path d="M883.492,145.154C882.591,146.055 881.369,146.561 880.095,146.561C878.821,146.561 877.599,146.055 876.698,145.154C867.856,136.312 844.201,112.657 835.359,103.815C833.483,101.939 830.442,101.939 828.566,103.815C825.41,106.971 820.735,111.646 817.58,114.801C815.703,116.677 815.703,119.719 817.58,121.595C828.915,132.931 865.362,169.378 876.698,180.714C878.574,182.59 881.616,182.59 883.492,180.714C900.401,163.804 975.358,88.847 992.267,71.938C994.143,70.062 994.143,67.02 992.267,65.144C989.112,61.988 984.437,57.314 981.281,54.158C980.38,53.257 979.158,52.751 977.884,52.751C976.61,52.751 975.388,53.257 974.487,54.158C959.404,69.241 898.575,130.07 883.492,145.154Z" style="fill:url(#_Linear1);"/>
+            <clipPath id="_clip1">
+                <rect x="1020" y="17" width="581" height="581"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(4.15,0,0,4.15,-6762.58,-1237.84)">
+                    <path d="M1883.32,385.37L1938.32,431.87L2008.9,309" style="fill:none;stroke:url(#_Linear2);stroke-width:12.08px;"/>
+                </g>
             </g>
         </g>
     </g>
     <defs>
-        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(163.798,-98.0001,98.0001,163.798,829.443,166.219)"><stop offset="0" style="stop-color:rgb(63,196,220);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(192,215,47);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(111.903,-152,152.349,112.159,1897,461)"><stop offset="0" style="stop-color:rgb(234,161,34);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(140,198,63);stop-opacity:1"/></linearGradient>
     </defs>
 </svg>

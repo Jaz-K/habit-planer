@@ -37,6 +37,8 @@ const {
     updateHabitScoreById,
     updateBio,
     deleteUser,
+    getAvatar,
+    updateAvatar,
 } = require("../db");
 
 // MIDDLEWARE
@@ -81,8 +83,16 @@ app.post("/api/users", async (req, res) => {
         await createScoreBoard(newUser.id);
         res.json({ success: true });
     } catch (error) {
-        console.log("POST /users", error);
-        res.status(500).json({ error: "Something is really wrong" });
+        console.log("POST /users", error.constraint);
+        if (error.constraint == "users_email_key") {
+            console.log("email already exists");
+            res.status(500).json({ error: "Email already exists" });
+        } else if (error.constraint == "users_nick_name_key") {
+            console.log("email already exists");
+            res.status(500).json({ error: "Nickname already exists" });
+        } else {
+            res.status(500).json({ error: "Something is really wrong" });
+        }
     }
 });
 
@@ -122,6 +132,19 @@ app.post("/api/login", async (req, res) => {
         console.log("POST login", error);
         res.status(500).json({ error: "Something went really wrong" });
     }
+});
+// GET AVATARE
+app.get("/api/avatare", async (req, res) => {
+    const response = await getAvatar();
+    // console.log("resonse avatare", response);
+    res.json(response);
+});
+app.post("/api/new_avatare", async (req, res) => {
+    const id = req.session.user_id;
+    const { img_url } = req.body;
+    const response = await updateAvatar(img_url, id);
+    console.log("resonse avatare", response);
+    res.json(response);
 });
 
 //// EDIT NICKNAME
@@ -224,7 +247,7 @@ app.post("/api/reset-habit/:id", async (req, res) => {
 app.get("/api/gethabitstatus/:id", async (req, res) => {
     const { id } = req.params;
     const response = await getHabitStatusById(id);
-
+    console.log("response", response, id);
     res.json(response);
 });
 //// SET HABIT STATUS
@@ -268,6 +291,17 @@ app.get("/api/users/:otherId", async (req, res) => {
     } else {
         res.json(otherUser);
     }
+});
+
+// OTHER USER SCORE
+
+app.get("/api/users_score/:otherId", async (req, res) => {
+    console.log(req.params, req.session);
+    const { otherId } = req.params;
+    const otherUser = await getScoreById(otherId);
+    console.log(otherUser);
+
+    res.json(otherUser);
 });
 //// DELETE USER
 app.post("/api/remove-profile", async (req, res) => {

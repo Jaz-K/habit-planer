@@ -91,6 +91,29 @@ async function getUserById(id) {
     );
     return result.rows[0];
 }
+
+// AVATAR LINK
+
+async function getAvatar() {
+    const result = await db.query(
+        `
+SELECT * FROM avatare
+    `
+    );
+    return result.rows;
+}
+async function updateAvatar(img_url, id) {
+    const result = await db.query(
+        `
+    UPDATE users 
+    SET img_url =$1
+    WHERE id = $2
+    RETURNING *
+    `,
+        [img_url, id]
+    );
+    return result.rows[0];
+}
 // UPDATE NICK NAME
 async function updateNickById(id, nick_name) {
     // console.log("db", id, nick_name);
@@ -275,6 +298,7 @@ async function deleteHabitById(habit_id) {
 // GET HABIT STATUS
 
 async function getHabitStatusById(habit_id) {
+    console.log(habit_id);
     const result = await db.query(
         `
     SELECT checked FROM daystatus WHERE habit_id = $1
@@ -346,4 +370,6 @@ module.exports = {
     updateHabitScoreById,
     checkNick,
     deleteUser,
+    getAvatar,
+    updateAvatar,
 };

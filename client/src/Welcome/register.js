@@ -1,23 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Register() {
     const [error, setError] = useState("");
-    // const [query, setQuery] = useState("");
-    // const [nickMatch, setNickMatch] = useState(false);
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const response = await fetch(`/api/check-nickname?q=${query}`);
-    //         const nickCheck = await response.json();
-    //         console.log("nickCheck register", nickCheck);
-    //         if (nickCheck.error) {
-    //             setNickMatch(false);
-    //         } else {
-    //             setNickMatch(true);
-    //         }
-    //     })();
-    // }, [query]);
 
     async function onSubmit(event) {
         event.preventDefault();
@@ -44,15 +29,11 @@ export default function Register() {
         try {
             const data = await response.json();
             setError(data.error);
+            console.log(data);
         } catch (error) {
             console.log("Something is really broken");
         }
     }
-
-    // function checkNickname(event) {
-    //     console.log("nick check", event.target.value);
-    //     setQuery(event.target.value);
-    // }
 
     return (
         <div className="welcome">
@@ -67,17 +48,8 @@ export default function Register() {
                 </div>
                 {/* check db while typing if nickname is there or not, on change? sending request to do return true or false */}
                 <div className="form-input">
-                    <input
-                        type="text"
-                        name="nick_name"
-                        id="nname"
-                        required
-                        /*  onChange={checkNickname} */
-                    />
-                    <label htmlFor="nname">
-                        Nick Name{" "}
-                        {/* {nickMatch && <span>already exists</span>} */}
-                    </label>
+                    <input type="text" name="nick_name" id="nname" required />
+                    <label htmlFor="nname">Nick Name </label>
                 </div>
                 <div className="form-input">
                     <input
