@@ -1,1 +1,3 @@
-# habit-planer
+#final project - habit-tracker
+
+
