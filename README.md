@@ -46,15 +46,15 @@ Create up to five habits and check the every day. If a day got missed it got cro
 
 _This project needs some refining, its only made in 5 days_
 
-> -   The Database structure is not ideal yet, plan to rewriting it
-> -   Implementing Redux to easier track any changes
-> -   Reconsider the tracking of the habits
-> -   CSS optimization
+-   The Database structure is not ideal yet, plan to rewriting it
+-   Implementing Redux to easier track any changes
+-   Reconsider the tracking of the habits
+-   CSS optimization
 
-> -   Bonus Features:
+#### Bonus Features:
 
-    > - Changing the how many days per week to do the habit and to choose which days it this should be, or on the fly adding these days per running week
-    > -   reminder maybe on a specific time
+-   Changing the how many days per week to do the habit and to choose which days it this should be, or on the fly adding these days per running week
+-   reminder maybe on a specific time
 
 ### Miscellaneous
 
