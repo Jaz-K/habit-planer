@@ -267,7 +267,7 @@ section.modal {
     transform: translate(-50%, -50%);
 }
 .modal img {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     width: 100%;
 }
 .modalCloseButton {
@@ -323,10 +323,11 @@ section.modal {
     max-width: 5rem;
     border-radius: 3rem;
     background-color: rgb(236, 223, 236);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .avatarPreview {
+    margin: 2rem 0;
     max-width: 10rem;
     height: 10rem;
     border: 1px solid #b8a8a4;
@@ -701,11 +702,11 @@ input:disabled {
         grid-template-columns: 100%;
         gap: 0;
     }
-    .modal {
-        /* width: 80%;
+    section.modal {
+        width: 80%;
         height: 100%;
-        top: 60%; */
-        /* overflow-y: scroll; */
+        top: 50%;
+        overflow-y: scroll;
     }
     .statistic ul {
         grid-template-columns: repeat(4, minmax(5rem, 1fr));
