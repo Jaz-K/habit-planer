@@ -55,6 +55,8 @@ Delete profile Button is only usable if the sentence is correct
 
 <kbd><img src="client/public/gifs/05_habittracker_settings.gif" width="80vw"/></kbd>
 
+---
+
 ### Conclusion
 
 _This project needs some refining, its only made in 5 days_
@@ -71,6 +73,8 @@ _This project needs some refining, its only made in 5 days_
 -   habit reminder maybe on a specific time
 -   User search
 -   Most tracked habits
+
+---
 
 ### Miscellaneous
 
