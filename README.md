@@ -46,7 +46,7 @@ Choose a avatar with a bigger preview
 
 Create up to five habits or delete them. Check the every day, if a day got missed it got crossed out and stopped the day streak. Reset a habit anytime.
 
-<kbd><img src="client/public/04_habittracker_habits.gif" width="80vw"/></kbd>
+<kbd><img src="client/public/gifs/04_habittracker_habits.gif" width="80vw"/></kbd>
 
 ### Settings
 
