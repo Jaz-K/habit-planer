@@ -2,6 +2,7 @@ import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
 export default function Settings({ user }) {
+    console.log("user", user);
     const SAFETYQUESTION = `${user.nick_name}, thanks for being here!`;
     const [match, setMatch] = useState(false);
     const [error, setError] = useState("");
@@ -57,6 +58,8 @@ export default function Settings({ user }) {
         const data = await response.json();
         console.log("edit password", data);
         setErrorEmail(data.emailError);
+        event.target.email.value = "";
+        event.target.emailRepeat.value = "";
     }
     async function newPassword(event) {
         try {
