@@ -53,8 +53,8 @@ _This project needs some refining, its only made in 5 days_
 
 > -   Bonus Features:
 
-    - Changing the how many days per week to do the habit and to choose which days it this should be, or on the fly adding these days per running week
-    -   reminder maybe on a specific time
+    > - Changing the how many days per week to do the habit and to choose which days it this should be, or on the fly adding these days per running week
+    > -   reminder maybe on a specific time
 
 ### Miscellaneous
 
